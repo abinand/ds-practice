@@ -16,7 +16,7 @@ class LinkedList:
             tempNode.printNode()
             tempNode = tempNode.next
         print("None") # for the last node
-        print()
+        print() # prints a new line
 
     def prepend(self, data):
         node = Node(data=data)
@@ -68,11 +68,11 @@ class LinkedList:
         slowPointer = self.head
         fastPointer = self.head
         while (fastPointer.next != None):
-            fastPointer = fastPointer.next.next
-            slowPointer = slowPointer.next
-            if (slowPointer == fastPointer):
+            fastPointer = fastPointer.next.next #moves twice
+            slowPointer = slowPointer.next      #moves once
+            if (slowPointer == fastPointer):    # if they meet, it is a loop
                 tempNode = slowPointer
-                counter = 1
+                counter = 1 #to find length of the loop
                 while (tempNode.next != slowPointer):
                     counter += 1
                     tempNode = tempNode.next
