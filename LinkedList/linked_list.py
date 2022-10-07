@@ -55,6 +55,16 @@ class LinkedList:
                 print(str(data) + "was not found")
                 return
             tempNode.next = tempNode.next.next
+    
+    def reverse(self):
+        current = self.head
+        prev = None
+        while(current != None):
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
 
     def __getCount(self, node:Node):
         if (node == None):
