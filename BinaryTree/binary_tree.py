@@ -1,23 +1,4 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
-
-    def printNode(self):
-        print(self.data, end=" ")
-    
-def printInOrder(node: Node):
-    if(node):
-        printInOrder(node.left)
-        node.printNode()
-        printInOrder(node.right)
-
-def printPreOrder(node: Node):
-    if (node):
-        node.printNode()
-        printPreOrder(node.left)
-        printPreOrder(node.right)
+from tree import TreeUtils, Node
 
 node = Node(1)
 node.left = Node(2)
@@ -32,12 +13,12 @@ node.right.left = Node(6)
 #   / \    /  \
 # 4    5   6   none
 
-
+binaryTree = TreeUtils()
 print("Tree printed in order - left, root, right")
-printInOrder(node)
+binaryTree.printInOrder(node)
 print()
 print("Tree printed pre-order - root, left, right")
-printPreOrder(node)
+binaryTree.printPreOrder(node)
 print()
 
 
@@ -73,8 +54,8 @@ print("Creating new tree with in-order and pre-order arrays")
 newTree = buildTree(inOrder, preOrder)
 
 print("Confirm new tree in-order")
-printInOrder(newTree)
+binaryTree.printInOrder(newTree)
 print()
 print("Confirm new tree pre-order")
-printPreOrder(newTree)
+binaryTree.printPreOrder(newTree)
 print()
