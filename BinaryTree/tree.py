@@ -11,7 +11,7 @@ class TreeUtils:
     def __init__(self, root: Node) -> None:
         self.root = root
 
-    # Breadth first traversal - preorder, inorder, postorder
+    # Depth first traversal - preorder, inorder, postorder
     def printInOrder(self):
         self.__printInOrderRec(self.root)
         print()
@@ -46,8 +46,8 @@ class TreeUtils:
         else:
             return rtreeHeight + 1
 
-    # Depth first traversal
-    def printLevelOrderDFS(self):
+    # Breadth first traversal
+    def printLevelOrder(self):
         queue = []
         queue.append(self.root)
         while (len(queue) > 0):

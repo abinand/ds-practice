@@ -22,8 +22,8 @@ binaryTree.printPreOrder()
 print()
 print("Height of the tree is " + str(binaryTree.height()))
 print()
-print("Level order traversal - depth first")
-binaryTree.printLevelOrderDFS()
+print("Level order traversal - breadth first")
+binaryTree.printLevelOrder()
 print()
 
 # Tree construction using pre-order and in-order notations
