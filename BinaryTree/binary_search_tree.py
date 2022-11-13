@@ -18,6 +18,13 @@ node = insertNode(90, node)
 node = insertNode(30, node)
 node = insertNode(40, node)
 
+
+#         40 
+#      /      \
+#    20        50 
+#   /  \      /   \
+# 10    30  60    90
+
 bst = TreeUtils(node)
 print("In Order Traversal")
 bst.printInOrder()

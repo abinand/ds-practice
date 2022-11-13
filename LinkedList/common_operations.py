@@ -74,9 +74,6 @@ print("Find intersection point")
 list1Length = llist1.getLength()
 list2Length = llist2.getLength()
 intersectionLength = abs(list1Length - list2Length)
-# A -> B -> C -> D
-# X -> Y -> Z 
-# X -> Y -> C -> D 
 # len(list1) - len(list2) = len(intersecting part)
 # then traverse the first list upto intersection
 list1Intersection = list1Length - intersectionLength
