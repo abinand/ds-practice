@@ -1,4 +1,5 @@
 from tree import TreeUtils, Node
+from math import inf
 
 node = Node(1)
 node.left = Node(2)
@@ -63,3 +64,18 @@ print()
 print("Confirm new tree pre-order")
 binaryTree.printPreOrder()
 print()
+
+# Find min element in the binary tree
+def findMin(root: Node):
+    if(root is None):
+        return inf
+    leftMin = findMin(root.left)
+    rightMin = findMin(root.right)
+    min = int(root.data)
+    if(leftMin < min):
+        min = leftMin
+    if(rightMin < min):
+        min = rightMin
+    return min
+
+print("Minimum node value in tree is " + str(findMin(newTreeNode)))
